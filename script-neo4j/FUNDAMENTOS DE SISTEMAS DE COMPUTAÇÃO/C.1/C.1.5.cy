@@ -6,10 +6,8 @@ CREATE (:Habilidade {nome:'Simulação'})
 CREATE (:CD {nome:'C.1.5', classificacao:'Avaliar'})
 
 // Vincula a CD a cada habilidade
-MATCH (cd:CD {nome:'C.1.5'})
-WHERE (habilidade:Habilidade {nome:'Modelos de análise de desempenho'})
+MATCH (cd:CD {nome:'C.1.5'}), (habilidade:Habilidade {nome:'Modelos de análise de desempenho'})
 CREATE (cd)-[:REQUER]->(habilidade)
 
-MATCH (cd:CD {nome:'C.1.5'})
-WHERE (habilidade:Habilidade {nome:'Simulação'})
+MATCH (cd:CD {nome:'C.1.5'}), (habilidade:Habilidade {nome:'Simulação'})
 CREATE (cd)-[:REQUER]->(habilidade)

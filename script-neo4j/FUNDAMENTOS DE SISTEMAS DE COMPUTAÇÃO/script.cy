@@ -1,3 +1,7 @@
+
+CREATE (:Competencia {nome:'FUNDAMENTOS DE SISTEMAS DE COMPUTAÇÃO'})
+
+
 // Vincula C.1.1 a FUNDAMENTOS DE SISTEMAS DE COMPUTAÇÃO
 MATCH (c:Competencia {nome:'FUNDAMENTOS DE SISTEMAS DE COMPUTAÇÃO'})
 MATCH (cd:CD {nome:'C.1.1'})

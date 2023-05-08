@@ -7,14 +7,11 @@ CREATE (:Habilidade {nome:'Compilação, ligação, carga e interpretação'})
 CREATE (:CD {nome:'C.1.3', classificacao:'Avaliar'})
 
 // Vincula a CD a cada habilidade
-MATCH (cd:CD {nome:'C.1.3'})
-WHERE (habilidade:Habilidade {nome:'Representação de código e dados'})
+MATCH (cd:CD {nome:'C.1.3'}), (habilidade:Habilidade {nome:'Representação de código e dados'})
 CREATE (cd)-[:REQUER]->(habilidade)
 
-MATCH (cd:CD {nome:'C.1.3'})
-WHERE (habilidade:Habilidade {nome:'Custo computacional'})
+MATCH (cd:CD {nome:'C.1.3'}), (habilidade:Habilidade {nome:'Custo computacional'})
 CREATE (cd)-[:REQUER]->(habilidade)
 
-MATCH (cd:CD {nome:'C.1.3'})
-WHERE (habilidade:Habilidade {nome:'Compilação, ligação, carga e interpretação'})
+MATCH (cd:CD {nome:'C.1.3'}), (habilidade:Habilidade {nome:'Compilação, ligação, carga e interpretação'})
 CREATE (cd)-[:REQUER]->(habilidade)

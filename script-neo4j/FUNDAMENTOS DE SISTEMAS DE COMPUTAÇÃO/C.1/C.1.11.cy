@@ -9,21 +9,17 @@ CREATE (:Habilidade {nome:'Trabalho de conclusão de curso'})
 CREATE (:CD {nome:'C.1.11', classificacao:'Criar'})
 
 // Vincula a CD à habilidade
-MATCH (cd:CD {nome:'C.1.11'})
-WHERE (habilidade:Habilidade {nome:'Laboratório de programação'})
+MATCH (cd:CD {nome:'C.1.11'}), (habilidade:Habilidade {nome:'Laboratório de programação'})
 CREATE (cd)-[:REQUER]->(habilidade)
 
 // Vincula a CD à habilidade
-MATCH (cd:CD {nome:'C.1.11'})
-WHERE (habilidade:Habilidade {nome:'Oficina de integração'})
+MATCH (cd:CD {nome:'C.1.11'}), (habilidade:Habilidade {nome:'Oficina de integração'})
 CREATE (cd)-[:REQUER]->(habilidade)
 
 // Vincula a CD à habilidade
-MATCH (cd:CD {nome:'C.1.11'})
-WHERE (habilidade:Habilidade {nome:'Estágio integrado'})
+MATCH (cd:CD {nome:'C.1.11'}), (habilidade:Habilidade {nome:'Estágio integrado'})
 CREATE (cd)-[:REQUER]->(habilidade)
 
 // Vincula a CD à habilidade
-MATCH (cd:CD {nome:'C.1.11'})
-WHERE (habilidade:Habilidade {nome:'Trabalho de conclusão de curso'})
+MATCH (cd:CD {nome:'C.1.11'}), (habilidade:Habilidade {nome:'Trabalho de conclusão de curso'})
 CREATE (cd)-[:REQUER]->(habilidade)

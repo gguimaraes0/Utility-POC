@@ -6,12 +6,10 @@ CREATE (:Habilidade {nome:'Transferência de calor'})
 CREATE (:CD {nome:'C.1.9', classificacao:'Aplicar'})
 
 // Vincula a CD à habilidade
-MATCH (cd:CD {nome:'C.1.9'})
-WHERE (habilidade:Habilidade {nome:'Eletricidade e Magnetismo'})
+MATCH (cd:CD {nome:'C.1.9'}), (habilidade:Habilidade {nome:'Eletricidade e Magnetismo'})
 CREATE (cd)-[:REQUER]->(habilidade)
 
 
 // Vincula a CD à habilidade
-MATCH (cd:CD {nome:'C.1.9'})
-WHERE (habilidade:Habilidade {nome:'Transferência de calor'})
+MATCH (cd:CD {nome:'C.1.9'}), (habilidade:Habilidade {nome:'Transferência de calor'})
 CREATE (cd)-[:REQUER]->(habilidade)

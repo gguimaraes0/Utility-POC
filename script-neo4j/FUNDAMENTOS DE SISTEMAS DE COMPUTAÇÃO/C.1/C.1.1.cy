@@ -7,14 +7,11 @@ CREATE (:Habilidade {nome:'Estrutura de dados'})
 CREATE (:CD {nome:'C.1.1', classificacao:'Aplicar'})
 
 // Vincula a CD a cada habilidade
-MATCH (cd:CD {nome:'C.1.1'})
-WHERE (habilidade:Habilidade {nome:'Técnicas de programação'})
+MATCH (cd:CD {nome:'C.1.1'}), (habilidade:Habilidade {nome:'Técnicas de programação'})
 CREATE (cd)-[:REQUER]->(habilidade)
 
-MATCH (cd:CD {nome:'C.1.1'})
-WHERE (habilidade:Habilidade {nome:'Paradigmas e padrões de programação'})
+MATCH (cd:CD {nome:'C.1.1'}), (habilidade:Habilidade {nome:'Paradigmas e padrões de programação'})
 CREATE (cd)-[:REQUER]->(habilidade)
 
-MATCH (cd:CD {nome:'C.1.1'})
-WHERE (habilidade:Habilidade {nome:'Estrutura de dados'})
+MATCH (cd:CD {nome:'C.1.1'}), (habilidade:Habilidade {nome:'Estrutura de dados'})
 CREATE (cd)-[:REQUER]->(habilidade)

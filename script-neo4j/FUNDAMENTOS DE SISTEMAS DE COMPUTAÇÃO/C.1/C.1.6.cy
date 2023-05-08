@@ -7,14 +7,11 @@ CREATE (:Habilidade {nome:'Provas matemáticas'})
 CREATE (:CD {nome:'C.1.6', classificacao:'Aplicar'})
 
 // Vincula a CD a cada habilidade
-MATCH (cd:CD {nome:'C.1.6'})
-WHERE (habilidade:Habilidade {nome:'Cáculo numérico'})
+MATCH (cd:CD {nome:'C.1.6'}), (habilidade:Habilidade {nome:'Cáculo numérico'})
 CREATE (cd)-[:REQUER]->(habilidade)
 
-MATCH (cd:CD {nome:'C.1.6'})
-WHERE (habilidade:Habilidade {nome:'Métodos de matemática aplicada'})
+MATCH (cd:CD {nome:'C.1.6'}), (habilidade:Habilidade {nome:'Métodos de matemática aplicada'})
 CREATE (cd)-[:REQUER]->(habilidade)
 
-MATCH (cd:CD {nome:'C.1.6'})
-WHERE (habilidade:Habilidade {nome:'Provas matemáticas'})
+MATCH (cd:CD {nome:'C.1.6'}), (habilidade:Habilidade {nome:'Provas matemáticas'})
 CREATE (cd)-[:REQUER]->(habilidade)
