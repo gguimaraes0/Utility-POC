@@ -1,3 +1,1 @@
 # Utility-POC
-
-https://miro.com/welcomeonboard/T1pPcTI4NmpvWEcwQTVlSXNqdnpjbWpaSDdkZkFPS1dQRG52ZlpNeHFOTEZrSlBYS3pYUjJwUEFYbmcxVGljYXwzMDc0NDU3MzYzMDA1MTUwMjYzfDI=?share_link_id=488090262309
